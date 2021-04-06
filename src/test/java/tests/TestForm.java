@@ -15,8 +15,7 @@ public class TestForm {
     void FillForm() {
         Faker faker = new Faker();
 
-        String site = "https://demoqa.com/automation-practice-form",
-                firstName = faker.name().firstName(),
+        String firstName = faker.name().firstName(),
                 lastName = faker.name().lastName(),
                 userEmail = faker.internet().emailAddress(),
                 gender = "Other",
@@ -32,7 +31,7 @@ public class TestForm {
                 city = "gurgaon";
 
         step("Открываем сайт", () -> {
-            open(site);
+            open("https://demoqa.com/automation-practice-form");
             $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
         });
 
