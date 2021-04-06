@@ -69,7 +69,6 @@ public class TestForm {
         step("Подтверждение формы", () -> {
             $("#submit").click();
         });
-
         step("Проверка формы", () -> {
             $(".table-responsive").shouldHave(text(firstName + " " + lastName),
                     text(userEmail),
